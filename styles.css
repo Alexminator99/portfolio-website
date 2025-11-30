@@ -1,27 +1,27 @@
 /* ===== CSS Variables ===== */
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #1a1a24;
-    --bg-card-hover: #22222e;
+    --bg-primary: #1a1412;
+    --bg-secondary: #231c19;
+    --bg-card: #2d2420;
+    --bg-card-hover: #3d322c;
     
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0b0;
-    --text-muted: #6b6b7b;
+    --text-primary: #faf8f7;
+    --text-secondary: #b8a99e;
+    --text-muted: #8a7a6e;
     
-    --accent-primary: #6366f1;
-    --accent-secondary: #8b5cf6;
-    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    --accent-primary: #f59e0b;
+    --accent-secondary: #ea580c;
+    --accent-gradient: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
     
     --android-green: #3ddc84;
-    --ios-gray: #a2aaad;
+    --ios-gray: #a8a29e;
     --security-red: #ef4444;
     --tools-orange: #f97316;
     --multiplatform-blue: #06b6d4;
     --architecture-purple: #a855f7;
     
-    --border-color: #2a2a3a;
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    --border-color: #4a3f38;
+    --shadow-color: rgba(0, 0, 0, 0.4);
     
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
@@ -223,7 +223,7 @@ img {
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -328,12 +328,12 @@ img {
 .btn-primary {
     background: var(--accent-gradient);
     color: var(--text-primary);
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 6px 30px rgba(245, 158, 11, 0.4);
 }
 
 .btn-secondary {
@@ -608,12 +608,12 @@ section {
 
 .focus-tags span {
     padding: 6px 12px;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(245, 158, 11, 0.1);
     color: var(--accent-primary);
     border-radius: var(--radius-sm);
     font-size: 0.8125rem;
     font-weight: 500;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
 .about-info-list {
@@ -737,7 +737,7 @@ section {
 }
 
 .skill-level.advanced {
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(245, 158, 11, 0.15);
     color: var(--accent-primary);
 }
 
@@ -758,9 +758,9 @@ section {
 }
 
 .skill-list li.highlight {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(245, 158, 11, 0.1);
     color: var(--accent-primary);
-    border-color: rgba(99, 102, 241, 0.3);
+    border-color: rgba(245, 158, 11, 0.3);
     font-weight: 500;
 }
 
@@ -796,9 +796,9 @@ section {
 }
 
 .cert-badge:hover {
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(245, 158, 11, 0.15);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
 }
 
 /* ===== Projects Section ===== */
@@ -1005,7 +1005,7 @@ section {
 
 .tech-tags span {
     padding: 4px 10px;
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(245, 158, 11, 0.15);
     color: var(--accent-primary);
     border-radius: var(--radius-sm);
     font-size: 0.8125rem;
@@ -1056,7 +1056,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(245, 158, 11, 0.15);
     border-radius: var(--radius-md);
     color: var(--accent-primary);
 }
