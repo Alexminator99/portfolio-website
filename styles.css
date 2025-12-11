@@ -23,6 +23,21 @@
     --border-color: #4a3f38;
     --shadow-color: rgba(0, 0, 0, 0.4);
 
+    /* Phone mockup colors */
+    --phone-body: #1a1a24;
+    --phone-border: #2a2a3a;
+    --phone-notch: #0a0a0f;
+    --phone-screen: #0d0d12;
+
+    /* Syntax highlighting */
+    --syntax-keyword: #c678dd;
+    --syntax-class: #e5c07b;
+    --syntax-string: #98c379;
+    --syntax-method: #61afef;
+
+    /* Status colors */
+    --success-color: #22c55e;
+
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
 
@@ -49,6 +64,21 @@
 
     --border-color: #e0d6cf;
     --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Phone mockup colors - lighter for light theme */
+    --phone-body: #2d2d3a;
+    --phone-border: #4a4a5a;
+    --phone-notch: #1a1a24;
+    --phone-screen: #1e1e28;
+
+    /* Syntax highlighting - adjusted for light theme visibility */
+    --syntax-keyword: #a855f7;
+    --syntax-class: #d97706;
+    --syntax-string: #16a34a;
+    --syntax-method: #2563eb;
+
+    /* Status colors - slightly darker for light backgrounds */
+    --success-color: #16a34a;
 }
 
 /* ===== Reset & Base ===== */
@@ -103,7 +133,7 @@ img {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(10, 10, 15, 0.85);
+    background: rgba(26, 20, 18, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid transparent;
@@ -112,7 +142,15 @@ img {
 
 .navbar.scrolled {
     border-bottom-color: var(--border-color);
-    background: rgba(10, 10, 15, 0.95);
+    background: rgba(26, 20, 18, 0.95);
+}
+
+[data-theme="light"] .navbar {
+    background: rgba(250, 248, 247, 0.85);
+}
+
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(250, 248, 247, 0.95);
 }
 
 .nav-container {
@@ -379,7 +417,7 @@ img {
     gap: 6px;
     font-size: 0.8125rem;
     font-weight: 600;
-    color: #22c55e;
+    color: var(--success-color);
     padding: 6px 12px;
     background: rgba(34, 197, 94, 0.15);
     border-radius: var(--radius-sm);
@@ -452,11 +490,11 @@ img {
 .phone-mockup {
     width: 280px;
     height: 560px;
-    background: #1a1a24;
+    background: var(--phone-body);
     border-radius: 40px;
     padding: 12px;
-    border: 3px solid #2a2a3a;
-    box-shadow: 
+    border: 3px solid var(--phone-border);
+    box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.05),
         0 25px 50px -12px rgba(0, 0, 0, 0.5),
         inset 0 0 0 1px rgba(255, 255, 255, 0.05);
@@ -471,7 +509,7 @@ img {
     transform: translateX(-50%);
     width: 100px;
     height: 28px;
-    background: #0a0a0f;
+    background: var(--phone-notch);
     border-radius: 20px;
     z-index: 10;
 }
@@ -479,7 +517,7 @@ img {
 .phone-screen {
     width: 100%;
     height: 100%;
-    background: #0d0d12;
+    background: var(--phone-screen);
     border-radius: 28px;
     overflow: hidden;
 }
@@ -564,10 +602,10 @@ img {
 .indent { padding-left: 20px; }
 .indent-2 { padding-left: 40px; }
 
-.keyword { color: #c678dd; }
-.class-name { color: #e5c07b; }
-.string { color: #98c379; }
-.method { color: #61afef; }
+.keyword { color: var(--syntax-keyword); }
+.class-name { color: var(--syntax-class); }
+.string { color: var(--syntax-string); }
+.method { color: var(--syntax-method); }
 
 /* ===== Scroll Indicator ===== */
 .scroll-indicator {
@@ -828,7 +866,7 @@ section {
 
 .skill-level.expert {
     background: rgba(34, 197, 94, 0.15);
-    color: #22c55e;
+    color: var(--success-color);
 }
 
 .skill-level.advanced {
@@ -1158,7 +1196,7 @@ section {
 
 .contact-icon.email {
     background: rgba(239, 68, 68, 0.15);
-    color: #ef4444;
+    color: var(--security-red);
 }
 
 .contact-icon svg {
@@ -1478,6 +1516,37 @@ section {
     align-items: center;
     justify-content: center;
     font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.company-logo-icon.cyan {
+    background: rgba(6, 182, 212, 0.15);
+    color: var(--multiplatform-blue);
+}
+
+.company-logo-icon.blue {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+}
+
+.company-logo-icon.purple {
+    background: rgba(168, 85, 247, 0.15);
+    color: var(--architecture-purple);
+}
+
+.company-logo-icon.green {
+    background: rgba(34, 197, 94, 0.15);
+    color: var(--success-color);
+}
+
+.company-logo-icon.orange {
+    background: rgba(249, 115, 22, 0.15);
+    color: var(--tools-orange);
+}
+
+.company-logo-icon.red {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--security-red);
 }
 
 /* ===== Services Section ===== */
@@ -1536,6 +1605,31 @@ section {
     margin-bottom: 20px;
     background: rgba(245, 158, 11, 0.1);
     color: var(--accent-primary);
+}
+
+.service-icon.android {
+    background: rgba(61, 220, 132, 0.15);
+    color: var(--android-green);
+}
+
+.service-icon.ios {
+    background: rgba(162, 170, 173, 0.15);
+    color: var(--ios-gray);
+}
+
+.service-icon.multiplatform {
+    background: rgba(6, 182, 212, 0.15);
+    color: var(--multiplatform-blue);
+}
+
+.service-icon.security {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--security-red);
+}
+
+.service-icon.architecture {
+    background: rgba(168, 85, 247, 0.15);
+    color: var(--architecture-purple);
 }
 
 .service-icon svg {
