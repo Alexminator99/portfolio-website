@@ -49,7 +49,7 @@
     "role": "Senior Reverse Engineer",
     "dateRange": "Jun 2025 — Aug 2025",
     "location": "Barcelona, Spain",
-    "description": "Performed comprehensive mobile security analyses using IDA Pro, Ghidra, and JADX for static analysis, alongside Frida and LLDB for runtime debugging. Identified security flaws and provided actionable insights to fortify application integrity.",
+    "description": "Reverse-engineered mobile applications to detect and review potentially fraudulent activity. Combined static analysis (IDA Pro, Ghidra, JADX) with runtime instrumentation (Frida, LLDB) to uncover deceptive and abusive behavior, then delivered actionable findings to strengthen application integrity.",
     "tags": ["IDA Pro", "Ghidra", "Frida", "Burp Suite"],
     "current": false,
     "order": 5
