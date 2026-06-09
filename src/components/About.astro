@@ -1,6 +1,8 @@
 ---
 import Section from './Section.astro';
+import { Image } from 'astro:assets';
 import { SITE } from '../consts';
+import alexPhoto from '../assets/alex.jpg';
 
 const stats = [
   { value: '9+', label: 'Years on Android' },
@@ -53,6 +55,17 @@ const exploring = [
     </div>
 
     <div class="reveal">
+      <figure
+        class="mx-auto mb-8 w-full max-w-[260px] overflow-hidden rounded-lg border border-hairline bg-surface sm:mx-0 lg:max-w-none"
+      >
+        <Image
+          src={alexPhoto}
+          alt={`Portrait of ${SITE.name}`}
+          width={520}
+          class="aspect-[4/5] w-full object-cover object-top"
+          loading="lazy"
+        />
+      </figure>
       <dl class="space-y-4">
         {
           facts.map((f) => (
