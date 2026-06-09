@@ -1,0 +1,36 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'section'> {
+  /** Editorial index, e.g. "01" */
+  index?: string;
+  /** Mono eyebrow label */
+  eyebrow?: string;
+  /** Serif section heading */
+  title?: string;
+  /** Optional intro line under the title */
+  intro?: string;
+}
+
+const { index, eyebrow, title, intro, class: className, ...rest } = Astro.props;
+const hasHeader = Boolean(index || eyebrow || title);
+---
+
+<section class:list={['mx-auto w-full max-w-6xl px-5 py-24 sm:py-32', className]} {...rest}>
+  {
+    hasHeader && (
+      <header class="reveal mb-12 sm:mb-16">
+        {(index || eyebrow) && (
+          <div class="flex items-center gap-3">
+            {index && <span class="eyebrow text-accent">{index}</span>}
+            {index && eyebrow && <span class="h-px w-8 bg-hairline-strong" aria-hidden="true" />}
+            {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+          </div>
+        )}
+        {title && <h2 class="mt-5 max-w-3xl text-h2 text-ink">{title}</h2>}
+        {intro && <p class="mt-4 max-w-2xl text-lead text-ink-soft">{intro}</p>}
+      </header>
+    )
+  }
+  <slot />
+</section>

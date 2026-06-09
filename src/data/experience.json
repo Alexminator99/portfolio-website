@@ -1,0 +1,123 @@
+[
+  {
+    "id": "mindguard",
+    "company": "MindGuard Group",
+    "role": "Lead Mobile Engineer",
+    "dateRange": "Feb 2026 — Present",
+    "location": "Málaga, Spain",
+    "description": "Leading mobile for MindGuard, a mental-health and habit-building app for Ukrainian veterans that rewards daily physical challenges with real micro-payments and pairs users with weekly accountability buddies. Engineered a cross-platform Kotlin Multiplatform app (Android + iOS) with native Jetpack Compose (Material 3 Expressive) and SwiftUI UIs, a multi-modular Clean Architecture using MVI, and core flows spanning identity verification, AI-verified exercise recording, moderated real-time chat, buddy matching, and a coins-to-payout rewards economy.",
+    "tags": ["Kotlin Multiplatform", "Jetpack Compose", "SwiftUI", "MVI", "Clean Architecture"],
+    "current": true,
+    "order": 1
+  },
+  {
+    "id": "atos",
+    "company": "Atos",
+    "role": "Android Tech Lead",
+    "dateRange": "Sep 2025 — Present",
+    "location": "Spain",
+    "description": "Android Tech Lead at Atos, an IT services company. Responsible for the entire Android lifecycle: deployments, feature development, bug fixes, and setting technical standards for the team to follow.",
+    "tags": ["Android", "Kotlin", "Team Lead", "CI/CD"],
+    "current": true,
+    "order": 2
+  },
+  {
+    "id": "siroc",
+    "company": "SIROC",
+    "role": "Mobile Software Engineer",
+    "dateRange": "Oct 2025 — Mar 2026",
+    "location": "Málaga, Spain",
+    "description": "Worked on advanced technology solutions spanning Software Development, AI/ML, VR/AR, Cloud Infrastructure, and Data Analytics at this innovative tech group.",
+    "tags": [],
+    "current": false,
+    "order": 3
+  },
+  {
+    "id": "aloware",
+    "company": "Aloware",
+    "role": "Senior Mobile Engineer",
+    "dateRange": "Sep 2025 — Nov 2025",
+    "location": "Spain",
+    "description": "Led development of native Android (Kotlin/Jetpack Compose) and iOS (Swift/SwiftUI) applications for this fast-growing contact center platform (#27 fastest-growing in the Pacific region). Implemented real-time communication features using the Twilio Voice SDK and WebRTC protocols.",
+    "tags": ["Kotlin", "Swift", "Twilio", "WebRTC"],
+    "current": false,
+    "order": 4
+  },
+  {
+    "id": "cognizant",
+    "company": "Cognizant",
+    "role": "Senior Reverse Engineer",
+    "dateRange": "Jun 2025 — Aug 2025",
+    "location": "Barcelona, Spain",
+    "description": "Performed comprehensive mobile security analyses using IDA Pro, Ghidra, and JADX for static analysis, alongside Frida and LLDB for runtime debugging. Identified security flaws and provided actionable insights to fortify application integrity.",
+    "tags": ["IDA Pro", "Ghidra", "Frida", "Burp Suite"],
+    "current": false,
+    "order": 5
+  },
+  {
+    "id": "ethermail",
+    "company": "EtherMail",
+    "role": "Mobile Lead",
+    "dateRange": "Nov 2024 — Jun 2025",
+    "location": "Barcelona, Spain",
+    "description": "Led mobile development for the Web2 & Web3 email platform, building the bridge that brings full inbox ownership, control, and sovereignty back to users.",
+    "tags": ["Web3", "Kotlin", "Swift"],
+    "current": false,
+    "order": 6
+  },
+  {
+    "id": "aptimyz",
+    "company": "Aptimyz",
+    "role": "Lead Mobile Developer",
+    "dateRange": "Oct 2023 — Nov 2024",
+    "location": "Málaga, Spain",
+    "description": "Developed an Android app for a cloud-based retail EPOS system with offline mode, customizable receipt printing, Clover SDK integration, and device-to-device communication.",
+    "tags": ["Android", "Clover SDK", "Offline-first"],
+    "current": false,
+    "order": 7
+  },
+  {
+    "id": "dspot",
+    "company": "DSpot Team",
+    "role": "iOS & Android Developer",
+    "dateRange": "Jul 2021 — Nov 2024",
+    "location": "Poland (Remote)",
+    "description": "3+ years developing both Android and iOS applications, working across the full mobile development stack for a range of client projects.",
+    "tags": ["Android", "iOS", "Kotlin", "Swift"],
+    "current": false,
+    "order": 8
+  },
+  {
+    "id": "vlue",
+    "company": "Vlue",
+    "role": "Android Engineer",
+    "dateRange": "Mar 2024 — Aug 2024",
+    "location": "Miami, FL (Remote)",
+    "description": "Developed Android applications for a US-based fintech startup.",
+    "tags": [],
+    "current": false,
+    "order": 9
+  },
+  {
+    "id": "subzero",
+    "company": "SUBZERO ICE SERVICES",
+    "role": "Senior Software Engineer",
+    "dateRange": "Oct 2022 — Oct 2023",
+    "location": "Cuba",
+    "description": "Lead Android developer building mobile applications for the company's services.",
+    "tags": [],
+    "current": false,
+    "order": 10
+  },
+  {
+    "id": "freelance",
+    "company": "Freelance & Earlier Roles",
+    "role": "Android Engineer",
+    "dateRange": "2017 — 2021",
+    "location": "Spain, Miami, Cuba",
+    "description": "Developed transportation apps for truckers in Spain using Firebase, Flutter-based apps with an AWS Amplify backend, and university connectivity applications.",
+    "tags": [],
+    "current": false,
+    "order": 11
+  }
+]

@@ -1,0 +1,52 @@
+---
+import Section from './Section.astro';
+import { SITE } from '../consts';
+
+const links = [
+  { label: 'Schedule a call', value: 'Book 30 min', href: 'https://calendly.com/alexminator1999/30min', external: true },
+  { label: 'LinkedIn', value: 'in/alexminator1999', href: SITE.social.linkedin, external: true },
+  { label: 'GitHub', value: 'Alexminator99', href: SITE.social.github, external: true },
+];
+---
+
+<Section id="contact" index="07" eyebrow="Contact">
+  <div class="reveal grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+    <div>
+      <h2 class="max-w-2xl text-h2 text-ink">
+        Let's build something <span class="accent-text">worth shipping.</span>
+      </h2>
+      <p class="mt-5 max-w-xl text-lead text-ink-soft">
+        Open to senior / lead mobile roles, consulting, and security audits. The fastest way to reach
+        me is email.
+      </p>
+      <a
+        href={`mailto:${SITE.email}`}
+        class="group mt-8 inline-flex items-center gap-3 font-display text-2xl font-semibold text-ink transition-colors duration-200 hover:text-accent sm:text-3xl"
+      >
+        {SITE.email}
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-200 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+      </a>
+    </div>
+
+    <ul class="space-y-px overflow-hidden rounded-lg border border-hairline">
+      {
+        links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              target={l.external ? '_blank' : undefined}
+              rel={l.external ? 'noopener' : undefined}
+              class="flex items-center justify-between gap-4 bg-bg px-5 py-4 transition-colors duration-200 hover:bg-surface"
+            >
+              <span class="eyebrow">{l.label}</span>
+              <span class="flex items-center gap-2 font-mono text-sm text-ink">
+                {l.value}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ink-muted"><path d="M7 17L17 7M9 7h8v8" /></svg>
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Section>

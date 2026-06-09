@@ -1,0 +1,65 @@
+[
+  {
+    "id": "mindguard",
+    "name": "MindGuard",
+    "company": "MindGuard Group",
+    "description": "Mental-health and habit-building app for Ukrainian veterans — daily physical challenges rewarded with real micro-payments, plus weekly accountability buddies. Cross-platform Kotlin Multiplatform (Android + iOS) with on-device AI exercise verification.",
+    "links": {
+      "playStore": "https://play.google.com/store/apps/details?id=com.mindguard.bloom"
+    },
+    "order": 1
+  },
+  {
+    "id": "anvil",
+    "name": "Anvil",
+    "company": "Indie",
+    "description": "Native developer toolkit for Mac, iPhone, and iPad — format, inspect, convert, generate, and debug everyday developer data (JSON, JWT, Base64, and more) with fully on-device processing. Built with SwiftUI and The Composable Architecture.",
+    "links": {
+      "appStore": "https://apps.apple.com/us/app/anvil-dev-toolset/id6775051027",
+      "web": "https://anvilmac.com"
+    },
+    "order": 2
+  },
+  {
+    "id": "chorus",
+    "name": "Chorus",
+    "company": "SIROC",
+    "description": "Fan engagement platform connecting artists with their core fans through exclusive content, live streams, and community features.",
+    "links": {
+      "appStore": "https://apps.apple.com/us/app/chorus-the-future-is-fandom/id6738390040"
+    },
+    "order": 3
+  },
+  {
+    "id": "aloware-talk2",
+    "name": "Aloware Talk2",
+    "company": "Aloware",
+    "description": "Business phone app for sales and support teams. Real-time calls, SMS, and CRM integration using Twilio Voice SDK and WebRTC.",
+    "links": {
+      "playStore": "https://play.google.com/store/apps/details?id=com.aloware.talk2",
+      "appStore": "https://apps.apple.com/us/app/aloware-talk-business-phone/id6461865944"
+    },
+    "order": 4
+  },
+  {
+    "id": "ethermail",
+    "name": "EtherMail",
+    "company": "EtherMail",
+    "description": "Web3 email platform bridging Web2 and Web3. Wallet-to-wallet communication with full inbox ownership and crypto rewards.",
+    "links": {
+      "playStore": "https://play.google.com/store/apps/details?id=com.ethermail.ethermail_android",
+      "appStore": "https://apps.apple.com/us/app/ethermail/id6451305966"
+    },
+    "order": 5
+  },
+  {
+    "id": "vlue",
+    "name": "Vlue",
+    "company": "Vlue LLC",
+    "description": "Miami-based rideshare platform with no surge pricing. Driver and Rider apps with real-time tracking and multiple ride categories.",
+    "links": {
+      "playStore": "https://play.google.com/store/apps/details?id=com.vlue.riderapp"
+    },
+    "order": 6
+  }
+]
