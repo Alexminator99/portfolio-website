@@ -1,0 +1,20 @@
+---
+const companies = ['SIROC', 'Atos', 'Cognizant', 'EtherMail', 'Aloware', 'DSpot Team'];
+---
+
+<div class="border-y border-hairline">
+  <div
+    class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:gap-10"
+  >
+    <p class="eyebrow shrink-0">Trusted by teams at</p>
+    <ul class="flex flex-wrap items-center gap-x-8 gap-y-3">
+      {
+        companies.map((c) => (
+          <li class="font-display text-lg text-ink-soft transition-colors duration-200 hover:text-ink">
+            {c}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

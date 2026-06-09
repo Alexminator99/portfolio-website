@@ -1,0 +1,59 @@
+---
+import Section from './Section.astro';
+
+const testimonials = [
+  {
+    quote:
+      'Alex is an exceptional mobile developer with deep expertise in both Android and iOS. His attention to detail and commitment to code quality made him an invaluable team member.',
+    initials: 'JD',
+    role: 'Tech Lead',
+    company: 'Cognizant',
+  },
+  {
+    quote:
+      'Working with Alex on our Web3 mobile app was a game-changer. His understanding of mobile security and ability to implement complex wallet integrations was impressive.',
+    initials: 'EM',
+    role: 'Product Manager',
+    company: 'EtherMail',
+  },
+  {
+    quote:
+      "Alex's expertise in Kotlin and Jetpack Compose helped us modernize our entire Android application. His architectural decisions set a new standard for our mobile team.",
+    initials: 'DS',
+    role: 'Engineering Manager',
+    company: 'DSpot Team',
+  },
+  {
+    quote:
+      'Exceptional work on our real-time communication features. Alex implemented complex Twilio and WebRTC integrations flawlessly. His technical knowledge is outstanding.',
+    initials: 'AW',
+    role: 'CTO',
+    company: 'Aloware',
+  },
+];
+---
+
+<Section id="testimonials" index="06" eyebrow="Testimonials" title="What teammates say.">
+  <div class="grid gap-5 sm:grid-cols-2">
+    {
+      testimonials.map((t) => (
+        <figure class="reveal surface flex flex-col p-7">
+          <blockquote class="flex-1 font-display text-lg leading-relaxed text-ink">
+            <span class="text-accent">&ldquo;</span>
+            {t.quote}
+            <span class="text-accent">&rdquo;</span>
+          </blockquote>
+          <figcaption class="mt-6 flex items-center gap-3 border-t border-hairline pt-5">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full border border-hairline-strong font-mono text-xs text-accent">
+              {t.initials}
+            </span>
+            <span class="text-sm">
+              <span class="block text-ink">{t.role}</span>
+              <span class="block text-ink-muted">{t.company}</span>
+            </span>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</Section>

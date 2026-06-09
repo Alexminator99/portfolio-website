@@ -1,0 +1,14 @@
+---
+import { SITE } from '../consts';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-hairline">
+  <div
+    class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-10 sm:flex-row sm:items-center sm:justify-between"
+  >
+    <p class="font-mono text-xs text-ink-muted">© {year} {SITE.name}</p>
+    <p class="font-mono text-xs text-ink-muted">Built with Astro &amp; Tailwind · Crafted in Málaga</p>
+  </div>
+</footer>

@@ -1,0 +1,79 @@
+---
+import Section from './Section.astro';
+
+const categories = [
+  {
+    name: 'Android',
+    level: 'Expert',
+    items: ['Kotlin', 'Jetpack Compose', 'MVVM / MVI', 'Coroutines & Flow', 'Hilt / Dagger', 'Room / SQLDelight'],
+  },
+  {
+    name: 'iOS',
+    level: 'Expert',
+    items: ['Swift', 'SwiftUI', 'UIKit', 'Combine', 'Core Data', 'Swift Concurrency'],
+  },
+  {
+    name: 'Cross-Platform',
+    level: 'Advanced',
+    items: ['Kotlin Multiplatform', 'Flutter', 'REST APIs', 'GraphQL', 'WebRTC', 'Twilio SDK'],
+  },
+  {
+    name: 'Security & Reverse Engineering',
+    level: 'Advanced',
+    items: ['IDA Pro / Ghidra', 'Frida / LLDB', 'Burp Suite', 'JADX', 'Static Analysis', 'Dynamic Analysis'],
+  },
+  {
+    name: 'Architecture',
+    level: 'Expert',
+    items: ['Clean Architecture', 'MVI Pattern', 'SOLID Principles', 'Dependency Injection', 'Modularization', 'TDD'],
+  },
+  {
+    name: 'Tools & DevOps',
+    level: 'Proficient',
+    items: ['Git / GitHub', 'Firebase', 'AWS', 'CI/CD Pipelines', 'Crashlytics / Sentry', 'Fastlane'],
+  },
+];
+
+const certifications = [
+  'Industry-Level Android Apps',
+  'SwiftUI Masterclass',
+  'Kotlin Multiplatform Apps',
+  'Reverse Engineering',
+];
+---
+
+<Section id="skills" index="02" eyebrow="Capabilities" title="The toolbox.">
+  <div class="grid gap-px overflow-hidden rounded-xl border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-3">
+    {
+      categories.map((cat) => (
+        <div class="reveal bg-bg p-6 sm:p-7">
+          <div class="flex items-baseline justify-between gap-3">
+            <h3 class="font-display text-xl font-semibold text-ink">{cat.name}</h3>
+            <span class="eyebrow text-accent">{cat.level}</span>
+          </div>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {cat.items.map((item) => (
+              <li class="rounded-sm bg-surface px-2.5 py-1 font-mono text-xs text-ink-soft">{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="reveal mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+    <p class="eyebrow shrink-0">Certifications</p>
+    <ul class="flex flex-wrap gap-2">
+      {
+        certifications.map((c) => (
+          <li class="inline-flex items-center gap-2 rounded-sm border border-hairline px-3 py-1.5 text-xs text-ink-soft">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent" aria-hidden="true">
+              <path d="M12 15l-3.5 2 1-4-3-2.5 4-.3L12 6l1.5 4.2 4 .3-3 2.5 1 4z" />
+            </svg>
+            {c}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Section>

@@ -1,0 +1,21 @@
+{
+  "name": "Alex Rivas — Lead Mobile Engineer",
+  "short_name": "Alex Rivas",
+  "description": "Lead Mobile Engineer with 9+ years building native Android & iOS apps.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1614",
+  "theme_color": "#1a1614",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer"],
+  "lang": "en",
+  "dir": "ltr"
+}

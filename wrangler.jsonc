@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "alex-portfolio",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [{ "pattern": "xela-dev-mobile.com", "custom_domain": true }]
+}

@@ -1,0 +1,61 @@
+---
+import Section from './Section.astro';
+
+const services = [
+  {
+    title: 'Android Development',
+    description:
+      'Native Android apps built with Kotlin and Jetpack Compose — clean architecture, fluid motion, and performance that holds up.',
+    tags: ['Kotlin', 'Jetpack Compose', 'MVVM / MVI'],
+  },
+  {
+    title: 'iOS Development',
+    description:
+      'Native iOS apps with Swift and SwiftUI — beautiful, HIG-compliant interfaces and seamless experiences.',
+    tags: ['Swift', 'SwiftUI', 'UIKit'],
+  },
+  {
+    title: 'Cross-Platform',
+    description:
+      'Kotlin Multiplatform for shared business logic across Android and iOS. One codebase, native performance.',
+    tags: ['KMP', 'Flutter', 'Shared Logic'],
+  },
+  {
+    title: 'Mobile Security Audits',
+    description:
+      'Reverse-engineering-led security analysis to find vulnerabilities and harden your apps before attackers do.',
+    tags: ['Pen Testing', 'Code Review', 'Hardening'],
+  },
+  {
+    title: 'Architecture Consulting',
+    description:
+      'Design scalable, maintainable mobile architectures — plus code review, refactoring, and team mentorship.',
+    tags: ['Clean Architecture', 'SOLID', 'Modularization'],
+  },
+  {
+    title: 'Technical Leadership',
+    description:
+      'Lead mobile teams, establish best practices and CI/CD pipelines, and ship high-quality work consistently.',
+    tags: ['Team Lead', 'CI/CD', 'Standards'],
+  },
+];
+---
+
+<Section id="services" index="05" eyebrow="Services" title="How I can help.">
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      services.map((s, i) => (
+        <article class="reveal surface flex flex-col p-6">
+          <span class="font-mono text-xs text-ink-muted">{String(i + 1).padStart(2, '0')}</span>
+          <h3 class="mt-3 font-display text-xl font-semibold text-ink">{s.title}</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{s.description}</p>
+          <ul class="mt-5 flex flex-wrap gap-2">
+            {s.tags.map((t) => (
+              <li class="font-mono text-[0.7rem] text-ink-muted">#{t}</li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</Section>

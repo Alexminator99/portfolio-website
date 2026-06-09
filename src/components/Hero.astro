@@ -1,0 +1,97 @@
+---
+import { SITE } from '../consts';
+
+const codeLines = [
+  [{ t: 'class', k: 'kw' }, { t: ' ' }, { t: 'MobileEngineer', k: 'type' }, { t: ' {' }],
+  [{ t: '  val', k: 'kw' }, { t: ' name = ' }, { t: '"Alex"', k: 'str' }],
+  [{ t: '  val', k: 'kw' }, { t: ' since = ' }, { t: '2017', k: 'num' }],
+  [{ t: '  val', k: 'kw' }, { t: ' stack = ' }, { t: 'listOf', k: 'fn' }, { t: '(' }],
+  [{ t: '    "Kotlin"', k: 'str' }, { t: ', ' }, { t: '"Swift"', k: 'str' }, { t: ',' }],
+  [{ t: '    "Compose"', k: 'str' }, { t: ', ' }, { t: '"SwiftUI"', k: 'str' }],
+  [{ t: '  )' }],
+  [{ t: '}' }],
+];
+
+const kClass: Record<string, string> = {
+  kw: 'text-accent',
+  type: 'text-ink',
+  str: 'text-accent-soft',
+  num: 'text-ink-soft',
+  fn: 'text-ink',
+};
+---
+
+<section id="main-content" class="relative mx-auto max-w-6xl px-5 pb-16 pt-14 sm:pt-20">
+  <div class="grid items-center gap-x-12 gap-y-16 lg:grid-cols-[1.12fr_0.88fr]">
+    {/* Type-led intro */}
+    <div class="reveal">
+      <p class="eyebrow flex items-center gap-3">
+        <span class="relative inline-flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+        </span>
+        Available for collaboration
+      </p>
+
+      <h1 class="mt-6 font-display text-display font-semibold text-ink">
+        Alex Javier<br /><span class="accent-text">Rivas Martínez</span>
+      </h1>
+
+      <p class="mt-7 max-w-xl text-lead text-ink-soft">{SITE.tagline}</p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-3">
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 rounded-sm bg-accent px-5 py-3 text-sm font-semibold text-bg transition-transform duration-200 ease-[var(--ease-glide)] hover:-translate-y-0.5"
+        >
+          Get in touch
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+        <a
+          href="#work"
+          class="inline-flex items-center gap-2 rounded-sm border border-hairline-strong px-5 py-3 text-sm font-medium text-ink transition-colors duration-200 hover:border-accent hover:text-accent"
+        >
+          View work
+        </a>
+      </div>
+
+      <dl class="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-hairline pt-8 sm:grid-cols-3">
+        <div>
+          <dt class="eyebrow">Now</dt>
+          <dd class="mt-2 text-sm text-ink">{SITE.currentRole.title}<br />@ {SITE.currentRole.company}</dd>
+        </div>
+        <div>
+          <dt class="eyebrow">Based in</dt>
+          <dd class="mt-2 text-sm text-ink">{SITE.location}</dd>
+        </div>
+        <div>
+          <dt class="eyebrow">Experience</dt>
+          <dd class="mt-2 text-sm text-ink">{SITE.yearsExperience} years</dd>
+        </div>
+      </dl>
+    </div>
+
+    {/* Refined device / code mockup */}
+    <div class="reveal flex justify-center lg:justify-end">
+      <div
+        class="w-full max-w-[300px] rounded-[2.25rem] border border-hairline-strong bg-bg-elevated p-3 shadow-[var(--shadow-lift)]"
+      >
+        <div class="rounded-[1.6rem] border border-hairline bg-bg p-5">
+          <div class="mb-5 flex items-center justify-between">
+            <span class="font-mono text-xs text-ink-muted">9:41</span>
+            <span class="flex gap-1" aria-hidden="true">
+              <span class="h-1.5 w-1.5 rounded-full bg-ink-muted"></span>
+              <span class="h-1.5 w-1.5 rounded-full bg-ink-muted"></span>
+              <span class="h-1.5 w-4 rounded-full bg-accent/70"></span>
+            </span>
+          </div>
+          <pre class="overflow-x-auto font-mono text-[0.8rem] leading-relaxed"><code>{codeLines.map((line) => (
+              <div>{line.map((seg) => (
+                  <span class={seg.k ? kClass[seg.k] : 'text-ink-muted'}>{seg.t}</span>
+                ))}</div>
+            ))}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

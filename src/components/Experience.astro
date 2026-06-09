@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import Section from './Section.astro';
+
+const experience = (await getCollection('experience')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Section id="experience" index="04" eyebrow="Experience" title="Where I've shipped.">
+  <ol class="relative">
+    {
+      experience.map((job) => (
+        <li class="reveal relative grid gap-3 border-l border-hairline pb-12 pl-8 last:border-l-transparent last:pb-0 sm:grid-cols-[170px_1fr] sm:gap-10 sm:pl-12">
+          <span
+            class:list={[
+              'absolute top-1.5 h-3 w-3 rounded-full border-2 border-bg',
+              '-left-[6.5px]',
+              job.data.current ? 'bg-accent' : 'bg-ink-muted',
+            ]}
+            aria-hidden="true"
+          />
+          <div>
+            <p class="font-mono text-xs text-ink-muted">{job.data.dateRange}</p>
+            <p class="mt-1 text-xs text-ink-muted">{job.data.location}</p>
+            {job.data.current && (
+              <span class="mt-3 inline-block rounded-sm bg-accent/15 px-2 py-0.5 font-mono text-[0.62rem] uppercase tracking-widest text-accent">
+                Current
+              </span>
+            )}
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-semibold text-ink">{job.data.company}</h3>
+            <p class="text-sm text-accent">{job.data.role}</p>
+            <p class="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">{job.data.description}</p>
+            {job.data.tags.length > 0 && (
+              <ul class="mt-4 flex flex-wrap gap-2">
+                {job.data.tags.map((t) => (
+                  <li class="rounded-sm bg-surface px-2 py-0.5 font-mono text-[0.7rem] text-ink-muted">
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</Section>
