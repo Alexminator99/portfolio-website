@@ -52,7 +52,7 @@
 }
 
 /* ===== Light Theme ===== */
-[data-theme="light"] {
+[data-theme='light'] {
     --bg-primary: #faf8f7;
     --bg-secondary: #f0ebe8;
     --bg-card: #ffffff;
@@ -82,7 +82,9 @@
 }
 
 /* ===== Reset & Base ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -145,11 +147,11 @@ img {
     background: rgba(26, 20, 18, 0.95);
 }
 
-[data-theme="light"] .navbar {
+[data-theme='light'] .navbar {
     background: rgba(250, 248, 247, 0.85);
 }
 
-[data-theme="light"] .navbar.scrolled {
+[data-theme='light'] .navbar.scrolled {
     background: rgba(250, 248, 247, 0.95);
 }
 
@@ -295,7 +297,8 @@ img {
 }
 
 @keyframes gradientShift {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 1;
         transform: scale(1) rotate(0deg);
     }
@@ -346,7 +349,8 @@ img {
 }
 
 @keyframes floatOrb {
-    0%, 100% {
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
     }
     25% {
@@ -426,8 +430,13 @@ img {
 }
 
 @keyframes pulse-green {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-    50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+    }
 }
 
 .hero-description {
@@ -541,7 +550,9 @@ img {
     gap: 4px;
 }
 
-.signal, .wifi, .battery {
+.signal,
+.wifi,
+.battery {
     width: 18px;
     height: 12px;
     background: var(--text-primary);
@@ -578,15 +589,33 @@ img {
     opacity: 0;
 }
 
-.code-line:nth-child(1) { animation-delay: 0.2s; }
-.code-line:nth-child(2) { animation-delay: 0.4s; }
-.code-line:nth-child(3) { animation-delay: 0.6s; }
-.code-line:nth-child(4) { animation-delay: 0.8s; }
-.code-line:nth-child(5) { animation-delay: 1s; }
-.code-line:nth-child(6) { animation-delay: 1.2s; }
-.code-line:nth-child(7) { animation-delay: 1.4s; }
-.code-line:nth-child(8) { animation-delay: 1.6s; }
-.code-line:nth-child(9) { animation-delay: 1.8s; }
+.code-line:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.code-line:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.code-line:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.code-line:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.code-line:nth-child(5) {
+    animation-delay: 1s;
+}
+.code-line:nth-child(6) {
+    animation-delay: 1.2s;
+}
+.code-line:nth-child(7) {
+    animation-delay: 1.4s;
+}
+.code-line:nth-child(8) {
+    animation-delay: 1.6s;
+}
+.code-line:nth-child(9) {
+    animation-delay: 1.8s;
+}
 
 @keyframes typeIn {
     from {
@@ -599,13 +628,25 @@ img {
     }
 }
 
-.indent { padding-left: 20px; }
-.indent-2 { padding-left: 40px; }
+.indent {
+    padding-left: 20px;
+}
+.indent-2 {
+    padding-left: 40px;
+}
 
-.keyword { color: var(--syntax-keyword); }
-.class-name { color: var(--syntax-class); }
-.string { color: var(--syntax-string); }
-.method { color: var(--syntax-method); }
+.keyword {
+    color: var(--syntax-keyword);
+}
+.class-name {
+    color: var(--syntax-class);
+}
+.string {
+    color: var(--syntax-string);
+}
+.method {
+    color: var(--syntax-method);
+}
 
 /* ===== Scroll Indicator ===== */
 .scroll-indicator {
@@ -631,8 +672,13 @@ img {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
 }
 
 /* ===== Section Styles ===== */
@@ -1035,6 +1081,15 @@ section {
     background: rgba(162, 170, 173, 0.25);
 }
 
+.store-link.web {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-primary);
+}
+
+.store-link.web:hover {
+    background: rgba(245, 158, 11, 0.25);
+}
+
 /* ===== Experience Section ===== */
 .experience {
     background: var(--bg-primary);
@@ -1234,29 +1289,28 @@ section {
     .container {
         padding: 0 32px;
     }
-    
+
     .nav-container {
         padding: 16px 32px;
     }
-    
+
     .hero {
         padding: 120px 32px 80px;
     }
-    
-    
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .contact-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
     }
-    
+
     .timeline-header {
         flex-direction: row;
         justify-content: space-between;
@@ -1269,7 +1323,7 @@ section {
     .nav-toggle {
         display: none;
     }
-    
+
     .nav-menu {
         position: static;
         width: auto;
@@ -1278,76 +1332,76 @@ section {
         flex-direction: row;
         gap: 32px;
     }
-    
+
     .nav-link {
         font-size: 0.9375rem;
     }
-    
+
     .hero {
         padding: 0 48px;
     }
-    
+
     .hero-content {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         gap: 64px;
     }
-    
+
     .hero-text {
         flex: 1;
     }
-    
+
     .hero-visual {
         flex: 0 0 auto;
     }
-    
+
     section {
         padding: 120px 0;
     }
-    
+
     .about-content {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .about-text {
         max-width: 800px;
     }
-    
+
     .skills-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .timeline::before {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .timeline-item {
         padding-left: 0;
         width: 50%;
     }
-    
+
     .timeline-item:nth-child(odd) {
         padding-right: 48px;
         text-align: right;
     }
-    
+
     .timeline-item:nth-child(even) {
         margin-left: 50%;
         padding-left: 48px;
     }
-    
+
     .timeline-item:nth-child(odd) .timeline-marker {
         left: auto;
         right: -9px;
     }
-    
+
     .timeline-item:nth-child(even) .timeline-marker {
         left: -9px;
     }
-    
+
     .timeline-item:nth-child(odd) .tech-tags {
         justify-content: flex-end;
     }
@@ -1358,12 +1412,12 @@ section {
     .hero-name {
         font-size: 4.5rem;
     }
-    
+
     .phone-mockup {
         width: 320px;
         height: 640px;
     }
-    
+
     .app-content {
         font-size: 14px;
     }
@@ -1413,11 +1467,11 @@ section {
     display: block;
 }
 
-[data-theme="light"] .theme-toggle .sun-icon {
+[data-theme='light'] .theme-toggle .sun-icon {
     display: block;
 }
 
-[data-theme="light"] .theme-toggle .moon-icon {
+[data-theme='light'] .theme-toggle .moon-icon {
     display: none;
 }
 

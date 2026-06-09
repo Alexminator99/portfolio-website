@@ -14,7 +14,7 @@ navToggle.addEventListener('click', () => {
 });
 
 // Close mobile menu when clicking a link
-navLinks.forEach(link => {
+navLinks.forEach((link) => {
     link.addEventListener('click', () => {
         navToggle.classList.remove('active');
         navMenu.classList.remove('active');
@@ -23,8 +23,6 @@ navLinks.forEach(link => {
 });
 
 // ===== Navbar Scroll Effect =====
-let lastScroll = 0;
-
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
@@ -41,15 +39,13 @@ window.addEventListener('scroll', () => {
     } else {
         backToTop.classList.remove('visible');
     }
-
-    lastScroll = currentScroll;
 });
 
 // ===== Back to Top Functionality =====
 backToTop.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
     });
 });
 
@@ -77,15 +73,15 @@ const sections = document.querySelectorAll('section[id]');
 
 function highlightNavLink() {
     const scrollY = window.pageYOffset;
-    
-    sections.forEach(section => {
+
+    sections.forEach((section) => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
         const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-        
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinks.forEach(link => link.classList.remove('active'));
+            navLinks.forEach((link) => link.classList.remove('active'));
             if (navLink) navLink.classList.add('active');
         }
     });
@@ -96,11 +92,11 @@ window.addEventListener('scroll', highlightNavLink);
 // ===== Intersection Observer for Animations =====
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -50px 0px',
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
@@ -109,12 +105,16 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.timeline-item, .skill-category, .detail-card, .contact-card, .service-card, .testimonial-card, .company-logo, .project-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
-});
+document
+    .querySelectorAll(
+        '.timeline-item, .skill-category, .detail-card, .contact-card, .service-card, .testimonial-card, .company-logo, .project-card',
+    )
+    .forEach((el) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(el);
+    });
 
 // Add visible class styles
 const style = document.createElement('style');
@@ -127,18 +127,18 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ===== Smooth Scroll for Safari =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             const headerOffset = 80;
             const elementPosition = target.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
+
             window.scrollTo({
                 top: offsetPosition,
-                behavior: 'smooth'
+                behavior: 'smooth',
             });
         }
     });
@@ -199,7 +199,7 @@ if (phoneMockup && window.innerWidth >= 1024) {
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const rate = scrolled * 0.3;
-        
+
         if (scrolled < window.innerHeight) {
             phoneMockup.style.transform = `translateY(${rate}px)`;
         }
@@ -227,16 +227,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Trigger animation for elements already in view
     setTimeout(() => {
-        document.querySelectorAll('.timeline-item, .skill-category, .detail-card, .contact-card, .service-card, .testimonial-card, .company-logo, .project-card').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                el.classList.add('visible');
-            }
-        });
+        document
+            .querySelectorAll(
+                '.timeline-item, .skill-category, .detail-card, .contact-card, .service-card, .testimonial-card, .company-logo, .project-card',
+            )
+            .forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    el.classList.add('visible');
+                }
+            });
     }, 100);
 });
 
 // ===== Console Easter Egg =====
 console.log('%c👋 Hey there, fellow developer!', 'font-size: 20px; font-weight: bold;');
-console.log('%cLooking at the code? Nice! Feel free to reach out if you want to chat about mobile development.', 'font-size: 14px;');
+console.log(
+    '%cLooking at the code? Nice! Feel free to reach out if you want to chat about mobile development.',
+    'font-size: 14px;',
+);
 console.log('%c📧 alex@xela-dev-mobile.com', 'font-size: 12px; color: #f59e0b;');
