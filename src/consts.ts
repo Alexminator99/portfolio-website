@@ -10,7 +10,7 @@ export const SITE = {
     'I craft innovative, secure, high-quality native apps for Android & iOS — and ship my own.',
   description:
     'Lead Mobile Engineer with 9+ years of experience building native Android & iOS apps. Expert in Kotlin, Swift, Jetpack Compose, SwiftUI, Kotlin Multiplatform, and mobile security.',
-  url: 'https://alexrivas.dev',
+  url: 'https://xela-dev-mobile.com',
   locale: 'en_US',
   email: 'alex@xela-dev-mobile.com',
   location: 'Málaga, Spain',

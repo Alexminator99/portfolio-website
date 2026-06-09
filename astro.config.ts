@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://alexrivas.dev',
+  site: 'https://xela-dev-mobile.com',
   integrations: [react(), sitemap()],
   // Self-hosted via Fontsource — no third-party origins, fonts emitted as woff2 at build.
   fonts: [

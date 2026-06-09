@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alexrivas.dev/sitemap-index.xml
+Sitemap: https://xela-dev-mobile.com/sitemap-index.xml
