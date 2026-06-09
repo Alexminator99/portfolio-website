@@ -1,2 +1,16 @@
+# build output
+dist/
+.astro/
+
+# dependencies
 node_modules/
+
+# wrangler / cloudflare
+.wrangler/
+
+# misc
 .DS_Store
+*.log
+.env
+.env.*
+!.env.example
