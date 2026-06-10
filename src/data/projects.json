@@ -5,6 +5,7 @@
     "company": "MindGuard Group",
     "description": "Mental-health and habit-building app for Ukrainian veterans — daily physical challenges rewarded with real micro-payments, plus weekly accountability buddies. Cross-platform Kotlin Multiplatform (Android + iOS) with on-device AI exercise verification.",
     "links": {
+      "appStore": "https://apps.apple.com/us/app/mindguard-mental-resilience/id6770721628",
       "playStore": "https://play.google.com/store/apps/details?id=com.mindguard.bloom"
     },
     "order": 1
