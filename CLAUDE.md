@@ -15,7 +15,7 @@ Personal portfolio for Alex Rivas (xela-dev-mobile.com) — an **Astro 6 + Tailw
 - `npm run build` — production build → `dist/`
 - `npm run preview` — preview the production build
 - `npm run check` — `astro check` (TypeScript + Astro diagnostics; the only type gate — there is no separate lint step)
-- `npm run deploy` — `wrangler deploy` (Cloudflare Workers, serves `./dist`)
+- `npm run deploy` — `wrangler deploy` (manual deploy to Cloudflare Workers, serves `./dist`; routine deploys happen automatically on push to `main` — see Notes)
 
 ## Architecture & conventions
 
@@ -33,5 +33,5 @@ When changing Astro, Tailwind, or integrations, verify current APIs via **Contex
 
 ## Notes
 
-- `og-image.png` is referenced for social cards but not yet in `public/` — supply a 1200×630 image.
+- **Deploy:** every push to `main` auto-builds + deploys via Cloudflare **Workers Builds** (`npm run build` → `wrangler deploy`); `npm run deploy` is the manual fallback. The apex `xela-dev-mobile.com` is bound to the Worker as a `custom_domain` route in `wrangler.jsonc`; `workers_dev` is intentionally off (apex is the single canonical URL).
 - Conventional Commits; never reference AI tooling in commits, code, or docs. Ask before `git commit` / `git push`.
