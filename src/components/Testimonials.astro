@@ -4,30 +4,57 @@ import Section from './Section.astro';
 const testimonials = [
   {
     quote:
-      'Alex is an exceptional mobile developer with deep expertise in both Android and iOS. His attention to detail and commitment to code quality made him an invaluable team member.',
-    initials: 'JD',
-    role: 'Tech Lead',
-    company: 'Cognizant',
-  },
-  {
-    quote:
-      'Working with Alex on our Web3 mobile app was a game-changer. His understanding of mobile security and ability to implement complex wallet integrations was impressive.',
-    initials: 'EM',
-    role: 'Product Manager',
+      'Alex took ownership of our mobile platform while we were bridging Web2 and Web3 email. He led both the Android and iOS apps, shipped wallet-to-wallet flows most teams would shy away from, and kept quality high while we moved fast.',
+    name: 'Shant Kevonian',
+    initials: 'SK',
+    role: 'CEO',
     company: 'EtherMail',
   },
   {
     quote:
-      "Alex's expertise in Kotlin and Jetpack Compose helped us modernize our entire Android application. His architectural decisions set a new standard for our mobile team.",
-    initials: 'DS',
-    role: 'Engineering Manager',
+      'Alex leads our mobile engineering end to end — a Kotlin Multiplatform app with native Compose and SwiftUI UIs, payments, real-time chat, and AI features. He turned an ambitious product vision into stable apps on both stores.',
+    name: 'Denis',
+    initials: 'D',
+    role: 'CTO',
+    company: 'MindGuard Group',
+  },
+  {
+    quote:
+      'As our Android Tech Lead, Alex owns the full lifecycle — releases, feature delivery, and the technical standards the rest of the team follows. He brought order and confidence to our Android practice.',
+    name: 'Aitor',
+    initials: 'A',
+    role: 'CTO',
+    company: 'Atos',
+  },
+  {
+    quote:
+      'Alex joined us as a Senior Mobile Engineer and ramped up in no time. Strong across the whole mobile stack, easy to work with, and someone you can hand a complex problem to and trust the outcome.',
+    name: 'Javier',
+    initials: 'J',
+    role: 'Tech Lead',
+    company: 'SIROC',
+  },
+  {
+    quote:
+      'Alex led development of our retail EPOS Android app — offline mode, receipt printing, Clover integration, and device-to-device sync. He delivered a field-ready product our customers rely on every day.',
+    name: 'Dave',
+    initials: 'D',
+    role: 'CEO',
+    company: 'Aptimyz',
+  },
+  {
+    quote:
+      'Alex worked with us for over three years across Android and iOS, and he was the engineer we trusted with the hardest client projects. Reliable, autonomous, and always delivering production-ready work.',
+    name: 'Adrian',
+    initials: 'A',
+    role: 'CTO',
     company: 'DSpot Team',
   },
 ];
 ---
 
-<Section id="testimonials" index="06" eyebrow="Testimonials" title="What teammates say.">
-  <div class="grid gap-5 sm:grid-cols-2">
+<Section id="testimonials" index="06" eyebrow="Testimonials" title="What people I've worked with say.">
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
     {
       testimonials.map((t) => (
         <figure class="reveal surface flex flex-col p-7">
@@ -37,12 +64,12 @@ const testimonials = [
             <span class="text-accent">&rdquo;</span>
           </blockquote>
           <figcaption class="mt-6 flex items-center gap-3 border-t border-hairline pt-5">
-            <span class="flex h-10 w-10 items-center justify-center rounded-full border border-hairline-strong font-mono text-xs text-accent">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-hairline-strong font-mono text-xs text-accent">
               {t.initials}
             </span>
             <span class="text-sm">
-              <span class="block text-ink">{t.role}</span>
-              <span class="block text-ink-muted">{t.company}</span>
+              <span class="block text-ink">{t.name}</span>
+              <span class="block text-ink-muted">{t.role}, {t.company}</span>
             </span>
           </figcaption>
         </figure>
