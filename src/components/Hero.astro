@@ -58,7 +58,11 @@ const kClass: Record<string, string> = {
       <dl class="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-hairline pt-8 sm:grid-cols-3">
         <div>
           <dt class="eyebrow">Now</dt>
-          <dd class="mt-2 text-sm text-ink">{SITE.currentRole.title}<br />@ {SITE.currentRole.company}</dd>
+          {
+            SITE.currentRoles.map((role) => (
+              <dd class="mt-2 text-sm text-ink">{role.title}<br />@ {role.company}</dd>
+            ))
+          }
         </div>
         <div>
           <dt class="eyebrow">Based in</dt>

@@ -14,7 +14,10 @@ export const SITE = {
   locale: 'en_US',
   email: 'alex@xela-dev-mobile.com',
   location: 'Málaga, Spain',
-  currentRole: { title: 'Lead Mobile Engineer', company: 'MindGuard Group' },
+  currentRoles: [
+    { title: 'Lead Mobile Engineer', company: 'MindGuard Group' },
+    { title: 'Senior Android Engineer', company: 'Betsson Group' },
+  ],
   yearsExperience: '9+',
   ogImage: '/og-image.png',
   knowsAbout: [

@@ -12,8 +12,8 @@ const stats = [
 
 const facts = [
   { label: 'Based in', value: SITE.location },
-  { label: 'Now', value: `${SITE.currentRole.title} @ ${SITE.currentRole.company}` },
-  { label: 'Education', value: 'B.S. Computer Science' },
+  { label: 'Now', value: SITE.currentRoles.map((r) => `${r.title} @ ${r.company}`).join('\n') },
+  { label: 'Education', value: 'B.S. Computer Science · UCLV (2023)' },
   { label: 'Languages', value: 'Spanish & English' },
   { label: 'Also into', value: 'IoT with Arduino · Football' },
   { label: 'Cloud', value: 'AWS & GCP' },
@@ -71,7 +71,7 @@ const exploring = [
           facts.map((f) => (
             <div class="flex flex-col gap-1 border-b border-hairline pb-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <dt class="eyebrow shrink-0">{f.label}</dt>
-              <dd class="text-sm text-ink sm:text-right">{f.value}</dd>
+              <dd class="whitespace-pre-line text-sm text-ink sm:text-right">{f.value}</dd>
             </div>
           ))
         }

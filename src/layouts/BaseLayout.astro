@@ -28,7 +28,7 @@ const jsonLd = {
   name: SITE.name,
   url: SITE.url,
   jobTitle: SITE.title,
-  worksFor: { '@type': 'Organization', name: SITE.currentRole.company },
+  worksFor: SITE.currentRoles.map((role) => ({ '@type': 'Organization', name: role.company })),
   knowsAbout: [...SITE.knowsAbout],
   sameAs: [SITE.social.linkedin, SITE.social.github],
   address: {

@@ -22,6 +22,16 @@
     "order": 2
   },
   {
+    "id": "betsson",
+    "name": "Betsson Casino y Deportes",
+    "company": "Betsson Group",
+    "description": "Sports-betting and casino app from Betsson Group. Building scalable, high-availability Android features on Clean Architecture, with reactive state management and real-time API integrations.",
+    "links": {
+      "playStore": "https://play.google.com/store/apps/details?id=com.betsson.android.betssonco.play"
+    },
+    "order": 3
+  },
+  {
     "id": "chorus",
     "name": "Chorus",
     "company": "SIROC",
@@ -29,7 +39,7 @@
     "links": {
       "appStore": "https://apps.apple.com/us/app/chorus-the-future-is-fandom/id6738390040"
     },
-    "order": 3
+    "order": 4
   },
   {
     "id": "aloware-talk2",
@@ -40,7 +50,7 @@
       "playStore": "https://play.google.com/store/apps/details?id=com.aloware.talk2",
       "appStore": "https://apps.apple.com/us/app/aloware-talk-business-phone/id6461865944"
     },
-    "order": 4
+    "order": 5
   },
   {
     "id": "ethermail",
@@ -51,7 +61,14 @@
       "playStore": "https://play.google.com/store/apps/details?id=com.ethermail.ethermail_android",
       "appStore": "https://apps.apple.com/us/app/ethermail/id6451305966"
     },
-    "order": 5
+    "order": 6
+  },
+  {
+    "id": "aptimyz",
+    "name": "Aptimyz",
+    "company": "Aptimyz",
+    "description": "Cloud-based retail EPOS and back-office platform. Built the Android app for Clover devices with offline mode, server-customizable receipt printing, error logging, and device-to-device communication.",
+    "order": 7
   },
   {
     "id": "vlue",
@@ -61,6 +78,28 @@
     "links": {
       "playStore": "https://play.google.com/store/apps/details?id=com.vlue.riderapp"
     },
-    "order": 6
+    "order": 8
+  },
+  {
+    "id": "idcap",
+    "name": "IDCap",
+    "company": "DSpot Team",
+    "description": "Medical companion app for the IDCap System that reads and interprets data from BLE-connected devices. Worked on the Android (Java, Dagger, MVVM) and iOS (Swift, MVVM) apps.",
+    "links": {
+      "appStore": "https://apps.apple.com/us/app/idcap-app/id1196356229",
+      "playStore": "https://play.google.com/store/apps/details?id=com.application.etect"
+    },
+    "order": 9
+  },
+  {
+    "id": "lanetalk",
+    "name": "Lanetalk",
+    "company": "DSpot Team",
+    "description": "The official World Bowling training app, reading scores live from connected bowling centers. Worked on the Android (Java, RxJava, MVVM) and iOS (Swift, RxSwift, MVVM) apps.",
+    "links": {
+      "appStore": "https://apps.apple.com/us/app/lanetalk-bowling/id493763132",
+      "playStore": "https://play.google.com/store/apps/details?id=com.lanetalk"
+    },
+    "order": 10
   }
 ]
