@@ -1,25 +1,36 @@
 [
   {
+    "id": "betsson",
+    "company": "Betsson Group",
+    "role": "Senior Android Engineer",
+    "dateRange": "Aug 2026 — Present",
+    "location": "Málaga, Spain",
+    "description": "Building scalable, high-availability Android apps, including Betsson Casino y Deportes, on Clean Architecture and SOLID principles. Owning features end to end across modular architecture, reactive state management, and real-time API integrations, while driving reliability through automated testing, performance profiling, and legacy refactoring alongside cross-functional product and engineering teams.",
+    "tags": ["Kotlin", "Kotlin Coroutines", "Clean Architecture", "Modularization"],
+    "current": true,
+    "order": 1
+  },
+  {
     "id": "mindguard",
     "company": "MindGuard Group",
     "role": "Lead Mobile Engineer",
     "dateRange": "Feb 2026 — Present",
     "location": "Málaga, Spain",
-    "description": "Leading mobile for MindGuard, a mental-health and habit-building app for Ukrainian veterans that rewards daily physical challenges with real micro-payments and pairs users with weekly accountability buddies. Engineered a cross-platform Kotlin Multiplatform app (Android + iOS) with native Jetpack Compose (Material 3 Expressive) and SwiftUI UIs, a multi-modular Clean Architecture using MVI, and core flows spanning identity verification, AI-verified exercise recording, moderated real-time chat, buddy matching, and a coins-to-payout rewards economy.",
+    "description": "Leading mobile for MindGuard, a mental-health and habit-building app for Ukrainian veterans built for a hospital-led pilot in Kyiv. It rewards daily physical challenges with real micro-payments and pairs users with weekly accountability buddies. Engineered a cross-platform Kotlin Multiplatform app (Android + iOS) with native Jetpack Compose (Material 3 Expressive) and SwiftUI UIs, a multi-modular Clean Architecture using MVI, and core flows spanning identity verification, AI-verified exercise recording, moderated real-time chat, buddy matching, and a coins-to-payout rewards economy.",
     "tags": ["Kotlin Multiplatform", "Jetpack Compose", "SwiftUI", "MVI", "Clean Architecture"],
     "current": true,
-    "order": 1
+    "order": 2
   },
   {
     "id": "atos",
     "company": "Atos",
     "role": "Android Tech Lead",
-    "dateRange": "Sep 2025 — Present",
-    "location": "Spain",
-    "description": "Android Tech Lead at Atos, an IT services company. Responsible for the entire Android lifecycle: deployments, feature development, bug fixes, and setting technical standards for the team to follow.",
-    "tags": ["Android", "Kotlin", "Team Lead", "CI/CD"],
-    "current": true,
-    "order": 2
+    "dateRange": "Sep 2025 — Aug 2026",
+    "location": "Málaga, Spain",
+    "description": "Led the technical direction and delivery of Android solutions at Atos, building secure, scalable mobile apps aligned with enterprise digital-transformation goals. Defined the mobile architecture and engineering standards (Kotlin, Clean Architecture, SOLID), drove code quality, testing, and performance across the lifecycle, and mentored Android engineers while improving team delivery through Agile practices.",
+    "tags": ["Kotlin", "Jetpack Compose", "Clean Architecture", "Team Lead"],
+    "current": false,
+    "order": 3
   },
   {
     "id": "siroc",
@@ -28,9 +39,9 @@
     "dateRange": "Oct 2025 — Mar 2026",
     "location": "Málaga, Spain",
     "description": "Worked on advanced technology solutions spanning Software Development, AI/ML, VR/AR, Cloud Infrastructure, and Data Analytics at this innovative tech group.",
-    "tags": [],
+    "tags": ["Android", "iOS"],
     "current": false,
-    "order": 3
+    "order": 4
   },
   {
     "id": "aloware",
@@ -41,7 +52,7 @@
     "description": "Led development of native Android (Kotlin/Jetpack Compose) and iOS (Swift/SwiftUI) applications for this fast-growing contact center platform (#27 fastest-growing in the Pacific region). Implemented real-time communication features using the Twilio Voice SDK and WebRTC protocols.",
     "tags": ["Kotlin", "Swift", "Twilio", "WebRTC"],
     "current": false,
-    "order": 4
+    "order": 5
   },
   {
     "id": "cognizant",
@@ -52,7 +63,7 @@
     "description": "Reverse-engineered mobile applications to detect and review potentially fraudulent activity. Combined static analysis (IDA Pro, Ghidra, JADX) with runtime instrumentation (Frida, LLDB) to uncover deceptive and abusive behavior, then delivered actionable findings to strengthen application integrity.",
     "tags": ["IDA Pro", "Ghidra", "Frida", "Burp Suite"],
     "current": false,
-    "order": 5
+    "order": 6
   },
   {
     "id": "ethermail",
@@ -63,7 +74,7 @@
     "description": "Led mobile development for the Web2 & Web3 email platform, building the bridge that brings full inbox ownership, control, and sovereignty back to users.",
     "tags": ["Web3", "Kotlin", "Swift"],
     "current": false,
-    "order": 6
+    "order": 7
   },
   {
     "id": "aptimyz",
@@ -74,7 +85,7 @@
     "description": "Developed an Android app for a cloud-based retail EPOS system with offline mode, customizable receipt printing, Clover SDK integration, and device-to-device communication.",
     "tags": ["Android", "Clover SDK", "Offline-first"],
     "current": false,
-    "order": 7
+    "order": 8
   },
   {
     "id": "dspot",
@@ -82,10 +93,10 @@
     "role": "iOS & Android Developer",
     "dateRange": "Jul 2021 — Nov 2024",
     "location": "Poland (Remote)",
-    "description": "3+ years developing both Android and iOS applications, working across the full mobile development stack for a range of client projects.",
-    "tags": ["Android", "iOS", "Kotlin", "Swift"],
+    "description": "3+ years developing Android and iOS apps for DSpot's clients, including Lanetalk, the official World Bowling training app, and IDCap, a medical app that reads data from BLE-connected devices.",
+    "tags": ["Android", "iOS", "Kotlin", "Swift", "BLE"],
     "current": false,
-    "order": 8
+    "order": 9
   },
   {
     "id": "vlue",
@@ -93,10 +104,10 @@
     "role": "Android Engineer",
     "dateRange": "Mar 2024 — Aug 2024",
     "location": "Miami, FL (Remote)",
-    "description": "Developed Android applications for a US-based fintech startup.",
-    "tags": [],
+    "description": "Developed the Android Rider and Driver apps for Vlue, a Miami-based ride-sharing platform that connects riders with the closest available drivers.",
+    "tags": ["Kotlin", "Android", "HERE SDK"],
     "current": false,
-    "order": 9
+    "order": 10
   },
   {
     "id": "subzero",
@@ -107,7 +118,7 @@
     "description": "Lead Android developer building mobile applications for the company's services.",
     "tags": [],
     "current": false,
-    "order": 10
+    "order": 11
   },
   {
     "id": "freelance",
@@ -118,6 +129,6 @@
     "description": "Developed transportation apps for truckers in Spain using Firebase, Flutter-based apps with an AWS Amplify backend, and university connectivity applications.",
     "tags": [],
     "current": false,
-    "order": 11
+    "order": 12
   }
 ]
