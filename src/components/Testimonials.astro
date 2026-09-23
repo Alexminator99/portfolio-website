@@ -1,79 +1,87 @@
 ---
 import Section from './Section.astro';
+import { SITE } from '../consts';
 
-const testimonials = [
+const recommendations = [
   {
-    quote:
-      'Alex took ownership of our mobile platform while we were bridging Web2 and Web3 email. He led both the Android and iOS apps, shipped wallet-to-wallet flows most teams would shy away from, and kept quality high while we moved fast.',
-    name: 'Shant Kevonian',
-    initials: 'SK',
-    role: 'CEO',
-    company: 'EtherMail',
+    summary:
+      'Credits Alex with architecting an offline-capable Android EPOS app on Clean Architecture, and highlights how he mentors junior developers, pushes for CI/CD, and works across product, design, and QA in English and Spanish.',
+    name: 'Alejandro Milián Morón',
+    initials: 'AM',
+    title: 'Senior Software Engineer, LexisNexis',
+    context: 'Studied together · Apr 2025',
   },
   {
-    quote:
-      'Alex leads our mobile engineering end to end — a Kotlin Multiplatform app with native Compose and SwiftUI UIs, payments, real-time chat, and AI features. He turned an ambitious product vision into stable apps on both stores.',
-    name: 'Denis',
-    initials: 'D',
-    role: 'CTO',
-    company: 'MindGuard Group',
+    summary:
+      'Saw Alex grow quickly over three years together: a fast learner and clear communicator who kept delivering while completing his degree.',
+    name: 'Guelmis Martinez',
+    initials: 'GM',
+    title: 'Senior IT Project Manager',
+    context: 'Managed Alex directly · Nov 2024',
   },
   {
-    quote:
-      'As our Android Tech Lead, Alex owns the full lifecycle — releases, feature delivery, and the technical standards the rest of the team follows. He brought order and confidence to our Android practice.',
-    name: 'Aitor',
-    initials: 'A',
-    role: 'CTO',
-    company: 'Atos',
+    summary:
+      "Worked with Alex for more than four years, including on Aptimyz's retail ePOS apps for Android and iOS, and singles out his Clover SDK integrations, his Bluetooth LE know-how, and how readily he mentors teammates.",
+    name: 'Daniel Placencia Alvarez',
+    initials: 'DP',
+    title: 'DevOps/MLOps Engineer',
+    context: 'Same team · Oct 2024',
   },
   {
-    quote:
-      'Alex joined us as a Senior Mobile Engineer and ramped up in no time. Strong across the whole mobile stack, easy to work with, and someone you can hand a complex problem to and trust the outcome.',
-    name: 'Javier',
-    initials: 'J',
-    role: 'Tech Lead',
-    company: 'SIROC',
+    summary:
+      'A teammate from mobile app development who calls Alex an exceptional professional: strong at solving complex problems, quick to share knowledge and support the team, and meticulous about quality.',
+    name: 'Elieser Pérez Reyes',
+    initials: 'EP',
+    title: 'Computer Science graduate',
+    context: 'Same team · Jan 2024 · Originally in Spanish',
   },
   {
-    quote:
-      'Alex led development of our retail EPOS Android app — offline mode, receipt printing, Clover integration, and device-to-device sync. He delivered a field-ready product our customers rely on every day.',
-    name: 'Dave',
-    initials: 'D',
-    role: 'CEO',
-    company: 'Aptimyz',
-  },
-  {
-    quote:
-      'Alex worked with us for over three years across Android and iOS, and he was the engineer we trusted with the hardest client projects. Reliable, autonomous, and always delivering production-ready work.',
-    name: 'Adrian',
-    initials: 'A',
-    role: 'CTO',
-    company: 'DSpot Team',
+    summary:
+      'Worked with Alex at Aptimyz Retail and credits him with delivering its flagship mobile app and integrating new hardware with secure payment processing, both on time and on budget.',
+    name: 'Charles Major',
+    initials: 'CM',
+    title: 'Product leader, payments & AI',
+    context: 'Senior colleague at Aptimyz Retail · Nov 2023',
   },
 ];
 ---
 
-<Section id="testimonials" index="06" eyebrow="Testimonials" title="What people I've worked with say.">
+<Section
+  id="testimonials"
+  index="06"
+  eyebrow="Recommendations"
+  title="What people I've worked with say."
+  intro="Highlights from my LinkedIn recommendations, summarized."
+>
   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
     {
-      testimonials.map((t) => (
+      recommendations.map((r) => (
         <figure class="reveal surface flex flex-col p-7">
-          <blockquote class="flex-1 font-display text-lg leading-relaxed text-ink">
-            <span class="text-accent">&ldquo;</span>
-            {t.quote}
-            <span class="text-accent">&rdquo;</span>
-          </blockquote>
+          <p class="flex-1 font-display text-lg leading-relaxed text-ink">{r.summary}</p>
           <figcaption class="mt-6 flex items-center gap-3 border-t border-hairline pt-5">
             <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-hairline-strong font-mono text-xs text-accent">
-              {t.initials}
+              {r.initials}
             </span>
             <span class="text-sm">
-              <span class="block text-ink">{t.name}</span>
-              <span class="block text-ink-muted">{t.role}, {t.company}</span>
+              <span class="block text-ink">{r.name}</span>
+              <span class="block text-ink-muted">{r.title}</span>
+              <span class="mt-1 block font-mono text-[0.7rem] text-ink-muted">{r.context}</span>
             </span>
           </figcaption>
         </figure>
       ))
     }
+  </div>
+
+  <div class="reveal mt-8">
+    <a
+      href={`${SITE.social.linkedin}/details/recommendations/`}
+      target="_blank"
+      rel="noopener"
+      class="inline-flex items-center gap-2 rounded-sm border border-hairline px-3 py-1.5 font-mono text-xs text-ink-soft transition-colors duration-200 hover:border-accent hover:text-accent"
+    >
+      Read them in full on LinkedIn
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg>
+    </a>
   </div>
 </Section>
